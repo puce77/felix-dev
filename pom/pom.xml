@@ -40,8 +40,10 @@
         <sourceReleaseAssemblyDescriptor>source-release-zip-tar</sourceReleaseAssemblyDescriptor>
 
         <!-- Default Java VM and API compatibility -->
-        <felix.java.version>8</felix.java.version>
-        
+        <felix.java.version>11</felix.java.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+
         <!-- Default settings for the site plugins -->
         <site.javadoc.exclude>*.impl:*.internal:</site.javadoc.exclude>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -172,12 +174,12 @@
                         </goals>
                         <configuration>
                             <rules>
-                                <!-- Require Java 8 or higher for building (as bnd since version 4.0 is built with Java 8) -->
+                                <!-- Require Java 11 or higher for building -->
                                 <requireJavaVersion>
                                     <message>
-                                        Apache Felix must be compiled with Java 8 or higher
+                                        Apache Felix must be compiled with Java 11 or higher
                                     </message>
-                                    <version>1.8.0</version>
+                                    <version>11</version>
                                 </requireJavaVersion>
                                 <requireMavenVersion>
                                     <version>3.5.0</version>
